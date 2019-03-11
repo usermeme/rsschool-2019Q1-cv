@@ -14,6 +14,45 @@ export default class App {
   }
 
   start() {
-      
+    if (this.scroller !== 0) {
+      this.header.showShadow();
+    } else {
+      this.header.increaseHeight();
+    }
+
+    this.slider.draw();
+    this.slider.changeWidth(window.screen.width);
+
+    document.addEventListener('scroll', () => {
+      this.scroller = document.documentElement.scrollTop;
+      if (this.scroller === 0) {
+        this.header.removeShadow();
+        this.header.increaseHeight();
+      } else {
+        this.header.showShadow();
+        this.header.reduceHeight();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      this.slider.changeWidth(window.screen.width);
+    });
+
+    document.addEventListener('click', (e) => {
+      this.header.removeDropdownContent(e.target);
+    });
+
+    this.navigation.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.scroll.scrolling(e.target);
+    });
+
+    this.skillsImage.addEventListener('click', (e) => {
+      this.slider.selectSlide(e.target);
+    });
+
+    this.dropdown.addEventListener('click', (e) => {
+      this.header.showContent(e.target);
+    });
   }
 }
