@@ -1,0 +1,55 @@
+form {
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "name message"
+        "email message"
+        "submit message";
+    grid-gap: 1em;
+    
+
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input:not([type="submit"]) {
+        min-height: 1.5em;
+        padding: 0.5vw;
+        border: 1px solid rgba($fontColor, 0.2);
+        border-radius: 5px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input[type="text"] {
+        grid-area: name;
+    }
+
+    input[type="email"] {
+        grid-area: email;
+    }
+
+    input[type="submit"] {
+        grid-area: submit;
+    }
+
+    textarea {
+        grid-area: message;
+        padding: 0.5vw;
+        border: 1px solid rgba($fontColor, 0.2);
+        border-radius: 5px;
+        resize: none;
+        overflow: auto;
+        &:focus {
+            outline: none;
+        }
+
+        @media screen and (max-width: 700px) {
+            min-height: 200px
+        }
+    }
+}
