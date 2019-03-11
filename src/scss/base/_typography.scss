@@ -1,0 +1,62 @@
+body {
+    font-family: $Thasadith;
+    font-size: 1.5em;
+}
+
+h2,
+h3,
+h4,
+a.logo,
+p {
+    span {
+        color: $primaryColor;
+    }
+}
+
+h2,
+h4,
+a.logo {
+    font-family: $Raleway;
+    color: $fontColor;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.2em;
+    line-height: 1.5em;  
+    text-align: left;
+}
+
+
+h3 {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+h4 {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.5em;
+    border-bottom: 1px solid $fontColor;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $secondaryColor;
+    }
+}
+
+a.logo {
+    font-size: 1.5em;
+    color: $secondaryColor;
+}
+
+nav a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
