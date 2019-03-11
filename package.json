@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/usermeme/rsschool-2019Q1-cv.git"
   },
-  "author": "",
+  "author": "Raman Yankovich",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/usermeme/rsschool-2019Q1-cv/issues"
@@ -31,7 +31,7 @@
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
