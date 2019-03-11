@@ -1,0 +1,47 @@
+#education {
+    .container { 
+        border: none;
+
+        .education-content {
+            @extend %grid;
+            grid-template-areas: 
+                "university english"
+                "university courses";
+
+            
+            @media screen and (max-width: 750px) {
+                display: flex;
+                flex-direction: column;
+
+                &>div {
+                    margin-top: 20px;
+                }
+            }
+
+            .university {
+                grid-area: university;
+                
+                &-info{
+                    @extend %grid;
+                }
+
+            }
+
+            .english {
+                grid-area: english;
+
+                &-info{
+                    @extend %grid;
+                }
+            }
+
+            .courses {
+                grid-area: courses;
+
+                &-info{
+                    @extend %grid;
+                }
+            }
+        }
+    }
+}

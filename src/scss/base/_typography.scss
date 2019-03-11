@@ -75,3 +75,21 @@ nav a {
     color: #ffffff;
     font-family: $Inconsolata;
 }
+
+#education {
+    p,
+    a {
+        font-weight: 700;
+        color: $fontColor;
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+}
