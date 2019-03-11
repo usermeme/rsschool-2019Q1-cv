@@ -1,0 +1,13 @@
+.wrapper { 
+    min-height: 100vh;
+    background-color: $wrapColor;
+    @extend %flex;
+    flex-direction: column;
+}
+
+.container { 
+    position: relative;
+    max-width: $containerWidth;
+    padding: 0 1vw;
+    margin: 0 auto;
+}
