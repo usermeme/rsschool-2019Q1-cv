@@ -23,19 +23,11 @@ export default class Header {
     this.dropdownContent.style = 'top: 2.1em;';
   }
 
-  showContent(target) {
-    if (target.tagName !== 'BUTTON') {
-      return;
-    }
-
+  showDropdownContent() {
     this.dropdownContent.classList.toggle('none');
   }
 
-  removeDropdownContent(target) {
-    if (target.tagName === 'BUTTON') {
-      return;
-    }
-
+  removeDropdownContent() {
     if (!this.dropdownContent.classList.contains('none')) {
       this.dropdownContent.classList.add('none');
     }

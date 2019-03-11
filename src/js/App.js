@@ -10,7 +10,7 @@ export default class App {
     this.scroller = document.documentElement.scrollTop;
     this.navigation = document.querySelector('.navigation');
     this.skillsImage = document.querySelector('.skills-img');
-    this.dropdown = document.querySelector('.dropdown');
+    this.dropdownButton = document.querySelector('.dropdown-button');
   }
 
   start() {
@@ -38,10 +38,6 @@ export default class App {
       this.slider.changeWidth(window.screen.width);
     });
 
-    document.addEventListener('click', (e) => {
-      this.header.removeDropdownContent(e.target);
-    });
-
     this.navigation.addEventListener('click', (e) => {
       e.preventDefault();
       this.scroll.scrolling(e.target);
@@ -51,8 +47,22 @@ export default class App {
       this.slider.selectSlide(e.target);
     });
 
-    this.dropdown.addEventListener('click', (e) => {
-      this.header.showContent(e.target);
+    document.addEventListener('click', (e) => {
+      let tar = e.target;
+
+      while (tar !== document) {
+        if (tar === this.dropdownButton) {
+          return;
+        }
+
+        tar = tar.parentNode;
+      }
+
+      this.header.removeDropdownContent();
+    });
+
+    this.dropdownButton.addEventListener('click', () => {
+      this.header.showDropdownContent();
     });
   }
 }
