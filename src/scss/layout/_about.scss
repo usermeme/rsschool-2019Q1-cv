@@ -1,0 +1,50 @@
+#about {
+    .about-content {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+        }
+
+        .photo {
+            flex: 1;
+            margin-left: 5vw;
+            border-radius: 1vh;
+            background: url(../img/me.jpg) 50% 25% no-repeat;
+
+            @media screen and (max-width: 750px) {
+                min-height: 300px;
+                width: auto;
+                margin: 0;
+            }
+        }
+
+        .about-information {
+            flex: 1;
+            
+            .contacts {
+                margin-top: 2em;
+                display: grid;
+                grid-template-columns: repeat(2, 1rf);
+                grid-template-rows: repeat(3, 1.5em);
+        
+                p {
+                    grid-column: 1 / 2;
+                }
+        
+                a,
+                .social {
+                    grid-column: 2 / 3;
+                    @extend %flex;
+
+                    a {
+                        margin-right: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

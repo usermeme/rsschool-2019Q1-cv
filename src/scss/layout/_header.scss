@@ -1,0 +1,11 @@
+header {
+    position: fixed;
+    max-height: 2.5em;
+    min-width: 100%;
+    background-color: $wrapColor;
+    z-index: 10;
+}
+
+.shadow {
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+}

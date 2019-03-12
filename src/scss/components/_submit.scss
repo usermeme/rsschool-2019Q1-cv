@@ -1,0 +1,13 @@
+input[type="submit"] {
+    border: none;
+    border-radius: 1vh;
+    background-color: $secondaryColor;
+    color: #ffffff;
+    max-width: 10em;
+    min-height: 2em;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba($secondaryColor, 0.9);
+    }
+}

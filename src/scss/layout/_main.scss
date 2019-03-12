@@ -1,0 +1,10 @@
+main {
+    section:first-child {
+        margin-top: 2.5em;
+    }
+
+    .container {
+        padding: 1.5em 1vw;
+        border-top: 1px solid $fontColor;
+    }
+}

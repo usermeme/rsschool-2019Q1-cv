@@ -1,0 +1,27 @@
+#skills {
+
+    .skills-img {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: 5vh 0;
+
+        img {
+            cursor: pointer;
+            max-height: 150px;
+            height: 15vw;
+            width: auto;
+            filter: grayscale(100%); 
+            transition: all 0.3s ease;
+
+            &:hover {
+                filter: grayscale(0%);
+                transform: scale(1.05);
+            }
+        }
+
+        .selected {
+            filter: grayscale(0%);
+        }
+    }
+}

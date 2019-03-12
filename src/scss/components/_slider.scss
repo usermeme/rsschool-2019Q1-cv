@@ -1,0 +1,25 @@
+.info-slider {
+    min-height: 10em;
+    box-shadow: 
+        inset 0px 11px 8px -10px $wrapColor,
+        inset 0px -11px 8px -10px $wrapColor; 
+    background: url(../img/slider-bg.png) 50% 50% / 100% 100% no-repeat fixed;
+   
+    .swiper-container {
+        max-width: $containerWidth;
+        height: 250px;
+
+        @media screen and (max-width: 600px){
+            height: 300px;
+        }
+
+        @media screen and (max-width: 350px){
+            height: 350px;
+        }
+
+        .swiper-slide {
+            padding: 2em 0;
+            width: 100%;
+        }
+    }
+}
