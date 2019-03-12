@@ -53,6 +53,10 @@ a {
 a.logo {
     font-size: 1.5em;
     color: $secondaryColor;
+
+    @media screen and (max-width: 350px){
+        font-size: 1.3em;
+    }
 }
 
 nav a {
@@ -63,6 +67,10 @@ nav a {
 
 .contacts {
     font-family: $Inconsolata;
+
+    @media screen and (max-width: 400px){
+        font-size: 0.75em;
+    }
 }
 
 
